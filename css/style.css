@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary-color: #170702;
+    --second-color: #670670;
+    --text-color: #FFFFFF;
+    --heading-font: "Inter", bold;
+    --body-font: "Inter", sans-serif;
+    --link-font: "Roboto", sans-serif;
+    --copyright-font: "Quicksand", sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/bgCV.png');
+    background-size: cover;
+    color: var(--text-color);
+    font-family: var(--body-font);
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 40px;
+}
+
+.headerDIV {
+    background-color: var(--second-color);
+    opacity: 80%;
+    border-radius: 25px;
+    width: 50%;
+}
+
+.interactive-box {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-left: 20%;
+}
+
+.interactive-box ul {
+    display: inline-block;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    font-family: var(--heading-font);
+    font-size: 24px;
+
+}
+
+.interactive-box i {
+    height: 46px;
+    width: 40px;
+}
+
+
+.interactive-box button {
+    display: inline-block;
+    width: 170px;
+    height: 80px;
+    font-family: "Inter", light;
+    color: var(--text-color);
+    font-size: 32px;
+    border-radius: 25px;
+    background-color: var(--second-color);
+    border: 2px inside solid black;
+    margin-left: 10px;
+}
+
+.counts {
+    background-color: var(--second-color);
+    opacity: 80%;
+    border-radius: 25px;
+    width: 474px;
+    height: 80px;
+    white-space: 15px;
+}
