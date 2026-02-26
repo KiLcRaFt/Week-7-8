@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --primary-color: #170702;
+    --primary-color: rgba(28, 20, 34, 0.8);
     --second-color: #670670;
     --text-color: #FFFFFF;
     --heading-font: "Inter", bold;
@@ -35,7 +35,7 @@ header {
     grid-template-rows: repeat(3, auto);
     text-align: center;
     justify-items: center;
-    align-items: center;
+    gap: 25px;
 }
 
 header h1 {
@@ -44,36 +44,44 @@ header h1 {
 }
 
 .headerDIV {
-    background-color: var(--second-color);
-    opacity: 80%;
-    border-radius: 25px;
+    background-color: var(--primary-color);
+    border-radius: 0px 0px 25px 25px;
+    width: 402px;
+    height: 393px;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.image-container img {
     width: 50%;
+    height: auto;
+    border-radius: 360px;
+    margin-top: 100px;
 }
 
 .interactive-box {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    margin-left: 20%;
+    display:grid ;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.interactive-box ul {
+.interactive-box span {
     display: inline-block;
     text-align: center;
     justify-items: center;
     align-items: center;
     font-family: var(--heading-font);
-    font-size: 24px;
+    font-size: 36px;
 
 }
-
-.interactive-box i {
-    height: 46px;
-    width: 40px;
-}
-
 
 .interactive-box button {
-    display: inline-block;
     width: 170px;
     height: 80px;
     font-family: "Inter", light;
@@ -81,15 +89,40 @@ header h1 {
     font-size: 32px;
     border-radius: 25px;
     background-color: var(--second-color);
-    border: 2px inside solid black;
+    border: 2px solid black;
     margin-left: 10px;
+    flex-shrink: 0;
 }
 
 .counts {
-    background-color: var(--second-color);
+    grid-column: 2/3;
+    background-color: var(--primary-color);
     opacity: 80%;
     border-radius: 25px;
     width: 474px;
     height: 80px;
-    white-space: 15px;
+    gap: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.contact-info {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    width: 949px;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 50px;
+}
+
+.contact-info span {
+    font-size: 24px;
+    font-family: var(--body-font);
+    
 }
