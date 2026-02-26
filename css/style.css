@@ -109,6 +109,10 @@ header h1 {
     flex: 1;
 }
 
+.counts i {
+    margin: 10px;
+}
+
 .contact-info {
     background-color: var(--primary-color);
     border-radius: 25px;
@@ -124,5 +128,194 @@ header h1 {
 .contact-info span {
     font-size: 24px;
     font-family: var(--body-font);
-    
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    width: 100%;
+    height: auto;
+    text-align: center;
+    justify-items: center;
+    margin-top: 1.5rem;
+    row-gap: 1.5rem;
+}
+
+.main-title {
+    font-size: 40px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    margin: 1.2rem 1.5rem auto;
+    line-height: 1.5;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.Education {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    width: 949px;
+    height: 544px;
+}
+.education-div {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 50px 25px;
+    align-items: start;
+    width: min(850px, 100%);
+    margin: 4rem auto;
+}
+
+.education-div li {
+    text-align: center;
+    list-style: none;
+}
+
+#middle-school {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+#collage {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.education-title {
+    font-size: 1.5rem;
+    font-family: var(--body-font);
+    font-weight: 500;
+}
+
+.education-subject, .education-education {
+    font-size: 1.5rem;
+    font-family: var(--body-font);
+}
+
+.education-timetable {
+    font-size: 1.5rem;
+    font-family: var(--body-font);
+    font-weight: 200;
+}
+
+.work-experience {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    width: 1027px;
+    height: 1022px;
+}
+
+.work-div {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.work-list {
+    display: grid;
+    row-gap: 35px;
+    margin: 0rem 1.5rem auto;
+    text-align: left;
+    list-style: none;
+}
+
+.work-name, .work-location, .work-description{
+    list-style: none;
+    font-family: var(--body-font);
+}
+
+.work-name{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.work-location {
+    font-size: 24px;
+}
+
+.work-description {
+    font-size: 20px;
+}
+
+.work-timetable-list {
+    list-style: none;
+    display: grid;
+    grid-template-rows: repeat(7, auto);
+    row-gap: 100px;
+    text-align: right;
+    margin-right: 1.5rem;
+
+    font-family: var(--body-font);
+    font-weight: 200;
+    font-size: 24px;
+}
+
+.language-skills {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    width: 1027px;
+    height: 320px;
+}
+
+.language-table {
+    height: 60%;
+    width: 100%;
+}
+
+#language-title th {
+    font-family: var(--body-font);
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.language-table-elements th {
+    font-family: var(--body-font);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.additional-info {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    width: 1027px;
+    height: 180px;
+}
+
+.additional-info p {
+    text-align: left;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.footer {
+    width: 100%;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.contact-links, .copyright{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    text-align: center;
+    justify-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-list-links {
+    font-family: var(--link-font);
+    font-size: 24px;
+    list-style: none;
+    opacity: 0.5;
+}
+
+.contact-list-links a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.copyright {
+    font-family: var(--copyright-font);
+    font-size: 24px;
+    opacity: 0.5;
 }
