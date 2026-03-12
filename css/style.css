@@ -25,7 +25,10 @@ body {
 }
 
 .container {
-    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -65,7 +68,8 @@ header h1 {
 
 .interactive-box {
     display:grid ;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 474px 1fr;
+    gap: 10px;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
@@ -90,7 +94,6 @@ header h1 {
     border-radius: 25px;
     background-color: var(--second-color);
     border: 2px solid black;
-    margin-left: 10px;
     flex-shrink: 0;
 }
 
@@ -131,9 +134,7 @@ header h1 {
 }
 
 .main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
+    margin: 0, auto;
     width: 100%;
     height: auto;
     text-align: center;
@@ -318,4 +319,75 @@ header h1 {
     font-family: var(--copyright-font);
     font-size: 24px;
     opacity: 0.5;
+}
+
+@media (max-width: 480px){
+    header {
+        width: 80%;
+    }
+
+    .image-container img {
+        margin-top: 80px;
+    }
+
+    .headerDIV p {
+        font-size:  18px;
+    }
+    .interactive-box {
+        display: block;
+    }
+    .interactive-box button {
+        width: 254px;
+        margin-top: 18px;
+        border-radius: 360px;
+        font-size: 48px;
+        font-weight: 300;
+    }
+
+    .contact-info {
+        width: 480px;
+        height: auto;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        gap: 10px;
+        padding: 1rem;
+    }
+
+    .contact-info span{
+        font-size: 36px;
+        text-align: left;
+    }
+
+    .main{
+        width: 100%;
+    }
+
+    .main-title{
+        
+    }
+
+    .Education{
+        width: 90%;
+    }
+
+    .education-div{
+        display: block;
+    }
+
+    .education-list {
+        margin-bottom: 25px;
+    }
+
+    .work-experience{
+        width: 90%;
+    }
+
+    .language-skills{
+        width: 90%;
+    }
+
+    .additional-info{
+        width: 90%;
+    }
+
 }
