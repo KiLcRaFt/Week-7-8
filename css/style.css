@@ -238,13 +238,12 @@ header h1 {
     font-size: 20px;
 }
 
-.work-timetable-list {
+.work-timetable-elem {
     list-style: none;
-    display: grid;
-    grid-template-rows: repeat(7, auto);
-    row-gap: 100px;
+    grid-column: 2;
     text-align: right;
     margin-right: 1.5rem;
+    place-content: center;
 
     font-family: var(--body-font);
     font-weight: 200;
@@ -263,16 +262,23 @@ header h1 {
     width: 100%;
 }
 
-#language-title th {
+#language-title {
     font-family: var(--body-font);
     font-size: 20px;
     font-weight: 100;
+    display: grid;
+    grid-template-columns:minmax(160px, 240px) repeat(5, auto);
+    margin-bottom: 1.5rem;
 }
 
-.language-table-elements th {
+.language-table-elements {
     font-family: var(--body-font);
     font-size: 24px;
     font-weight: 300;
+    display: grid;
+    grid-template-columns:minmax(160px, 240px) repeat(5, auto);
+    grid-template-rows: repeat(3, auto);
+    row-gap: 1.5rem;
 }
 
 .additional-info {
@@ -322,8 +328,13 @@ header h1 {
 }
 
 @media (max-width: 480px){
+    body{
+        background-size: cover;
+        background-position:center;
+    }
+    
     header {
-        width: 80%;
+        width: 480px;
     }
 
     .image-container img {
@@ -334,7 +345,13 @@ header h1 {
         font-size:  18px;
     }
     .interactive-box {
+        width: 100%;
         display: block;
+    }
+
+    .counts {
+        width: auto;
+        gap: 10px;
     }
     .interactive-box button {
         width: 254px;
@@ -345,7 +362,7 @@ header h1 {
     }
 
     .contact-info {
-        width: 480px;
+        width: 90%;
         height: auto;
         display: grid;
         grid-template-rows: repeat(3, auto);
@@ -354,24 +371,32 @@ header h1 {
     }
 
     .contact-info span{
-        font-size: 36px;
+        font-size: 32px;
         text-align: left;
     }
 
     .main{
-        width: 100%;
+        width: 480px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+
     }
 
     .main-title{
-        
+        display: block;
+        margin-bottom: 10px;
     }
 
     .Education{
         width: 90%;
+        height: auto;
+        padding-bottom: 20px;
     }
 
     .education-div{
         display: block;
+        margin: 5px;
     }
 
     .education-list {
@@ -380,14 +405,76 @@ header h1 {
 
     .work-experience{
         width: 90%;
+        height: auto;
+    }
+
+
+    .work-div {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 10px;
+    }
+
+    .work-places{
+        text-align: center;
+    }
+
+    .work-timetable-elem {
+        grid-column: 1;
+        text-align: center;
+        font-size: 0.95em;
+        margin-top: -40px;
     }
 
     .language-skills{
-        width: 90%;
+        width: 95%;
+        height: auto;
     }
+
+    .language-table{
+        display: grid;
+        grid-template-columns:repeat(4, auto);
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    #language-title{
+        display: grid;
+        height: 100%;
+        grid-column: 1;
+        grid-template-columns: 1fr;
+        place-items:center left;
+    }
+
+    .language-table-elements{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        place-items:center;
+    }
+
 
     .additional-info{
         width: 90%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .additional-info p{
+        text-align: center;
+        font-size: large;
+    }
+
+    footer{
+        margin-top: 20px;
+    }
+
+    .contact-list-links {
+        font-size: 20px;
+    }
+
+    .copyright {
+        font-size: 20px;
     }
 
 }
