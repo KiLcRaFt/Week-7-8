@@ -3,7 +3,16 @@
 :root{
     --primary-color: rgba(28, 20, 34, 0.8);
     --second-color: #670670;
+
+    --hover-color: #B039BA;
+    --clicked-color: #4F4A50;
+    --pressed-color: #969297;
+    
     --text-color: #FFFFFF;
+    --hover-text-color: #FAB0F0;
+    --clicked-text-color: #ACACAC;
+    --pressed-text-color: #191818;
+
     --heading-font: "Inter", bold;
     --body-font: "Inter", sans-serif;
     --link-font: "Roboto", sans-serif;
@@ -85,7 +94,7 @@ header h1 {
 
 }
 
-.interactive-box button {
+.button {
     width: 170px;
     height: 80px;
     font-family: "Inter", light;
@@ -353,7 +362,7 @@ header h1 {
         width: auto;
         gap: 10px;
     }
-    .interactive-box button {
+    .button {
         width: 254px;
         margin-top: 18px;
         border-radius: 360px;
@@ -477,4 +486,18 @@ header h1 {
         font-size: 20px;
     }
 
+    .button:hover{
+    filter: brightness(1);
+}
+
+}
+
+.button:hover{
+    filter: brightness(0.75);
+}
+
+.button:active, .button:focus:active{
+    color: var(--hover-text-color);
+    background-color: var(--hover-color);
+    filter: brightness(1);
 }
